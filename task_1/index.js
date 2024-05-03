@@ -1,7 +1,7 @@
 import {encoded, translations} from './data.js'
 
-//console.log("Let's rock")
-//console.log(encoded, translations)
+console.log("Let's rock")
+console.log(encoded, translations)
 
 function decoded(encoded, translations) {
     let uniqueIds = [];
@@ -22,8 +22,9 @@ function decoded(encoded, translations) {
         }
         return decodedObj;
     });
-    console.log("Уникальные ID'шники:", Array.from(uniqueIds));
-    return decoded;
+    console.log("После расшифровки: ");
+    console.log(decoded);
+    console.log("Уникальные ID'шники, которых нет в translations:", uniqueIds);
 }
-console.log("После расшифровки: ");
-console.log(decoded(encoded, translations));
+
+decoded(encoded, translations);
